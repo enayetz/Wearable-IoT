@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/relativeLayout_ID"
+    tools:context="com.example.enayet.smartshirt.MainActivity">
+
+    <ca.hss.heatmaplib.HeatMap
+        android:id="@+id/heatmap"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:minOpacity="0"
+        app:maxOpacity="255" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/imageview_ID"
+        android:adjustViewBounds="true"
+        android:src="@drawable/tshirt2refayet"
+        android:scaleType="centerInside"
+        android:layout_below="@+id/application_ID" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/application_ID"
+        android:text="Smart Shirt Application"
+        android:gravity="center"
+        android:textStyle="bold"
+        android:textSize="20sp"
+        android:textColor="@color/colorPrimary" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/bottomTV_ID"
+        android:text="Bottom(F): "
+        android:layout_below="@id/imageview_ID"
+        android:textStyle="bold"
+        android:textSize="17sp"
+        android:textColor="@color/colorPrimaryDark" />
+
+    <TextView
+        android:id="@+id/tmp1TV_ID"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/imageview_ID"
+        android:layout_toRightOf="@id/bottomTV_ID"
+        android:text="val 1"
+        android:textSize="17sp"
+        android:textColor="@color/colorPrimaryDark" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/leftTV_ID"
+        android:text="left Arm(F): "
+        android:layout_below="@id/bottomTV_ID"
+        android:textStyle="bold"
+        android:textSize="17sp"
+        android:textColor="@color/colorPrimaryDark" />
+
+    <TextView
+        android:id="@+id/tmp2TV_ID"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="val 2"
+        android:textSize="17sp"
+        android:layout_below="@id/tmp1TV_ID"
+        android:layout_toRightOf="@id/leftTV_ID"
+        android:textColor="@color/colorPrimaryDark" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/rightTV_ID"
+        android:text="Right Arm(F): "
+        android:layout_below="@id/leftTV_ID"
+        android:textStyle="bold"
+        android:textSize="17sp"
+        android:textColor="@color/colorPrimaryDark" />
+
+    <TextView
+        android:id="@+id/tmp3TV_ID"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="17sp"
+        android:layout_below="@id/tmp2TV_ID"
+        android:layout_toRightOf="@id/rightTV_ID"
+        android:text="val 3"
+        android:textColor="@color/colorPrimaryDark" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/averageTV_ID"
+        android:text="Average(F): "
+        android:layout_below="@id/rightTV_ID"
+        android:textStyle="bold"
+        android:textSize="17sp"
+        android:textColor="@color/colorPrimaryDark" />
+
+    <TextView
+        android:id="@+id/tmpAvgTV_ID"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tmp3TV_ID"
+        android:layout_toRightOf="@id/averageTV_ID"
+        android:text="Avg"
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="17sp" />
+
+    <View
+        android:id="@+id/separator_ID"
+        android:layout_width="1dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/imageview_ID"
+        android:layout_marginStart="160dp"
+        android:background="@android:color/darker_gray" />
+
+    <TextView
+        android:id="@+id/userinfoTV_ID"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/imageview_ID"
+        android:layout_toRightOf="@id/separator_ID"
+        android:text="User Information"
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="17sp"
+        android:textStyle="bold" />
+
+    <FrameLayout
+        android:id="@+id/seekbar_placeholder"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_below="@id/userinfoTV_ID"
+        android:layout_toRightOf="@id/separator_ID" />
+
+    <org.florescu.android.rangeseekbar.RangeSeekBar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/seekbar_ID"
+        android:layout_below="@+id/imageview_ID"
+        android:layout_marginTop="10dp"
+        android:layout_toEndOf="@+id/separator_ID" />
+
+</RelativeLayout>
